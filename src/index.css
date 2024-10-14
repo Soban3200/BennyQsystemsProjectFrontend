@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Montserrat', sans-serif; /* Ensure fallback font is specified */
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  /* Ensure vertical scrolling is handled correctly */
+}
+
+.box_shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
