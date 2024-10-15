@@ -5,12 +5,10 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      output: {
-        manualChunks: undefined,  // To avoid code splitting issues on refresh
-      },
+      // Remove manualChunks if you want default chunking behavior
     },
   },
   server: {
-    historyApiFallback: true,  // Important for SPA routing
+    // You can remove this if you don't need SPA routing specifically handled
   },
 });
