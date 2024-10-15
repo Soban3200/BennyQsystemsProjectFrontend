@@ -2,6 +2,7 @@ import React from "react";
 import Swal from "sweetalert2";
 
 const Quote = () => {
+  console.log("Quote");
   const [result, setResult] = React.useState("");
 
   const onSubmit = async (event) => {
