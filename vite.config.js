@@ -6,7 +6,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: undefined,  // To avoid code splitting issues on refresh
+        manualChunks: undefined,  // Avoids code splitting issues on refresh
       },
     },
   },
