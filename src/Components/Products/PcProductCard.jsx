@@ -1,29 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProductRatings from "./ProductRatings";
+
 const ProductCard = ({ product }) => {
   return (
-    <div className="max-w-sm mx-auto h-[550px] mb-8 bg-white border rounded-lg shadow-md overflow-hidden">
-      <img
-        className="w-full h-64 p-2 mb-2 object-contain"
-        src={product.images[0].image}
-        alt={product.name}
-      />
+    <div className="max-w-sm mx-auto mb-8 bg-white border rounded-lg shadow-md overflow-hidden">
+      {/* Image Container */}
+      <div className="h-64 bg-gray-100 flex justify-center items-center p-2">
+        <img
+          className="max-h-full max-w-full object-cover"
+          src={product.images[0].image}
+          alt={product.name}
+        />
+      </div>
 
-      <div className="p-2 text-center">
+      <div className="p-4 text-center">
         {/* Product Heading with fixed height */}
-        <Link to={"/pc-products/" + product._id}>
-          <h2 className="text-[17px] text-center h-14 mb-2 font-bold p-2 text-gray-900 overflow-hidden">
-            <span>{product.name}</span>
+        <Link to={`/pc-products/${product._id}`}>
+          <h2 className="text-lg h-14 font-bold text-gray-900 overflow-hidden mb-2">
+            {product.name}
           </h2>
         </Link>
 
         {/* Star Rating Section */}
-
         <ProductRatings product={product} />
 
         {/* Price Section */}
-        <div className="p-1">
+        <div className="my-2">
           <span className="text-lg font-bold text-gray-800">
             Rs. {product.price}
           </span>
@@ -31,14 +34,14 @@ const ProductCard = ({ product }) => {
 
         {/* Product Description */}
         <p className="text-gray-600 text-sm line-clamp-3 mb-2">
-          <span>{product.description}</span>
+          {product.description}
         </p>
       </div>
 
       {/* View Details Button */}
-      <div className="flex justify-center">
-        <Link to={`/pc-products/${product._id}`} className="w-2/5">
-          <button className="w-full text-base sm:text-sm rounded-sm bg-[#ff9f00] text-white hover:bg-yellow-400 py-2 transition-colors duration-300">
+      <div className="flex justify-center p-4">
+        <Link to={`/pc-products/${product._id}`} className="w-full">
+          <button className="w-full text-sm rounded-sm bg-[#ff9f00] text-white hover:bg-yellow-400 py-2 transition-colors duration-300">
             View Details
           </button>
         </Link>
