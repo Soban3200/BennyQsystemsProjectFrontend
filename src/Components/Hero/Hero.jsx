@@ -31,12 +31,12 @@ const Hero = () => {
           >
             Shop Now
           </Link>
-          <a
-            href="/quote"
+          <Link
+            to="/quote"
             className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-3 xs:px-4 sm:px-6 rounded-lg transition duration-300 w-full xs:w-auto text-xs xs:text-sm sm:text-base"
           >
             Get a Quote
-          </a>
+          </Link>
         </div>
       </div>
     </div>
