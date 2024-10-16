@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
-    <div className="flex  flex-col items-center justify-center w-full min-h-screen pt-[64px]   relative overflow-hidden">
+    <div className="flex flex-col items-center justify-center w-full min-h-screen pt-[64px] relative xs:bottom-28 sm:bottom-5 overflow-hidden">
       {/* Card Wrapper */}
       <div className="relative w-[400px] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-md shadow-xl">
         {/* BorderBeam Animation */}
