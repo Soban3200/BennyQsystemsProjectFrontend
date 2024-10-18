@@ -37,6 +37,42 @@ const Register = () => {
             <BiUser className="absolute top-1/2 right-2 transform -translate-y-1/2 text-gray-500 peer-focus:text-indigo-800 transition-all duration-300 ease-in-out" />
           </div>
 
+          {/* Phone Number Input */}
+          <div className="relative my-4">
+            <input
+              type="tel"
+              id="phoneNumber"
+              className="block w-full px-0 py-2 text-base sm:text-lg text-gray-900 bg-transparent border-b-2 border-gray-500 appearance-none focus:outline-none focus:ring-0 peer transition duration-300 ease-in-out"
+              required
+              placeholder=" "
+              aria-label="Phone Number"
+            />
+            <label
+              htmlFor="phoneNumber"
+              className="absolute left-0 top-2 text-gray-500 text-sm sm:text-base transform -translate-y-6 scale-75 origin-[0] peer-focus:left-0 peer-focus:text-indigo-800 peer-focus:top-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 transition-all duration-300 ease-in-out"
+            >
+              Phone Number
+            </label>
+          </div>
+
+          {/* Address Input */}
+          <div className="relative my-4">
+            <input
+              type="text"
+              id="address"
+              className="block w-full px-0 py-2 text-base sm:text-lg text-gray-900 bg-transparent border-b-2 border-gray-500 appearance-none focus:outline-none focus:ring-0 peer transition duration-300 ease-in-out"
+              required
+              placeholder=" "
+              aria-label="Address"
+            />
+            <label
+              htmlFor="address"
+              className="absolute left-0 top-2 text-gray-500 text-sm sm:text-base transform -translate-y-6 scale-75 origin-[0] peer-focus:left-0 peer-focus:text-indigo-800 peer-focus:top-0 peer-focus:scale-75 peer-focus:-translate-y-6 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 transition-all duration-300 ease-in-out"
+            >
+              Address
+            </label>
+          </div>
+
           {/* Password Input */}
           <div className="relative my-5">
             <input
