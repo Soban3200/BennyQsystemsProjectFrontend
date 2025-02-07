@@ -36,7 +36,7 @@ const PcProducts = ({ product }) => {
       {/* Conditionally render a loading image or spinner */}
       {loading ? (
         <div className="flex justify-center items-center">
-          <img src="path-to-your-loading-image.gif" alt="Loading..." />
+          <img src="/assets/LoadingGif.gif" alt="Loading..." />
         </div>
       ) : (
         <div className="flex flex-wrap">
