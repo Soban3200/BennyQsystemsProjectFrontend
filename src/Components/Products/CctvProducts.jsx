@@ -1,52 +1,38 @@
 import React, { useEffect, useState } from "react";
-import PcProductCard from "./PcProductCard";
-import ProductSearch from "./ProductSearch";
+import CctvProductCard from './CctvProductCard';
 import { useSearchParams } from "react-router-dom";
+import CctvProductSearch from "./CctvProductSearch";
 
-const PcProducts = ({ product }) => {
+const CctvProducts = ({ product }) => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);  // Track loading state
-  const [searchParams] = useSearchParams(); 
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    const keyword = searchParams.get('keyword') || " "; 
+    const keyword = searchParams.get("keyword") || "";
     const apiUrl = keyword
-      ? `${import.meta.env.VITE_API_URL}/pc-products?keyword=${keyword}`
-      : `${import.meta.env.VITE_API_URL}/pc-products`;
-
-    setLoading(true);  // Set loading to true before starting the fetch
+      ? `${import.meta.env.VITE_API_URL}/cctv-products?keyword=${keyword}`
+      : `${import.meta.env.VITE_API_URL}/cctv-products`;
 
     fetch(apiUrl)
       .then((res) => res.json())
-      .then((res) => {
-        setProducts(res.products);
-        setLoading(false);  // Set loading to false once the data is fetched
-      })
-      .catch((error) => {
-        console.error("Error fetching products:", error);
-        setLoading(false);  // Set loading to false if an error occurs
-      });
+      .then((res) => setProducts(res.products))
+      .catch((error) => console.error("Error fetching products:", error));
   }, [searchParams]);
 
   return (
     <div className="bg-[#e9ecef]">
-      <ProductSearch />
-      <h1 className="w-full p-2 text-center text-xl font-extrabold">PC products</h1>
+      <CctvProductSearch />
+      <h1 className="w-full p-2 text-center text-xl font-extrabold">
+        CCTV products
+      </h1>
 
-      {/* Conditionally render a loading image or spinner */}
-      {loading ? (
-        <div className="flex justify-center items-center">
-          <img src="/assets/LoadingGif.gif" alt="Loading..." />
-        </div>
-      ) : (
-        <div className="flex flex-wrap">
-          {products.map((product) => (
-            <PcProductCard key={product._id} product={product} />
-          ))}
-        </div>
-      )}
+      <div className="flex flex-wrap justify-center gap-6 p-4">
+        {products.map((product) => (
+          <CctvProductCard key={product._id} product={product} />
+        ))}
+      </div>
     </div>
   );
 };
 
-export default PcProducts;
+export default CctvProducts;
