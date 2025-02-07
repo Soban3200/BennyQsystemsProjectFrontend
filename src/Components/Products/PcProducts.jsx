@@ -8,7 +8,7 @@ const PcProducts = ({product}) => {
   const [searchParams] = useSearchParams(); 
 
   useEffect(() => {
-    const keyword = searchParams.get('keyword') || ""; 
+    const keyword = searchParams.get('keyword') || "Loading"; 
     const apiUrl = keyword
       ? `${import.meta.env.VITE_API_URL}/pc-products?keyword=${keyword}`
       : `${import.meta.env.VITE_API_URL}/pc-products`;
