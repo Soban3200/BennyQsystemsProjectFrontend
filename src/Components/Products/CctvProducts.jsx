@@ -31,7 +31,7 @@ const CctvProducts = ({ product }) => {
   }, [searchParams]);
 
   return (
-    <div className="bg-[#e9ecef]">
+    <div className="h-full">
       <CctvProductSearch />
       <h1 className="w-full p-2 text-center text-xl font-extrabold">
         CCTV products
@@ -41,7 +41,7 @@ const CctvProducts = ({ product }) => {
         {loading ? (
           // Show loading gif when loading state is true
           <div className="w-full flex justify-center">
-            <img src={loadingGif} alt="Loading..." className="h-24 w-24" />
+            <img src={loadingGif} alt="Loading..." className="h-72 w-72" />
           </div>
         ) : (
           // Show products when loading is false
