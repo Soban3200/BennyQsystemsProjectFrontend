@@ -20,16 +20,16 @@ function App() {
   const [cartItemCount, setCartItemCount] = useState([]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-[#e9ecef] ">
       <Router>
         {/* Header with Navbar */}
-        <header className="w-full fixed top-0 left-0 z-50 bg-white">
+        <header className="w-full fixed top-0 left-0   z-50 bg-white shadow-md">
           <ToastContainer theme="dark" position="top-right" />
           <Navbar cartItemCount={cartItemCount} />
         </header>
 
         {/* Main Content */}
-        <main className="flex-auto pt-[64px] w-full overflow-auto">
+        <main className="flex-auto pt-[64px] w-full  overflow-auto">
           <div className="w-full">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -73,16 +73,15 @@ function App() {
                   />
                 }
               />
-               <Route path="/about" element={<About />} />
+              <Route path="/about" element={<About />} />
               <Route path="/support" element={<Support />} />
-              <Route path="/quote" element={<Quote/>} />
+              <Route path="/quote" element={<Quote />} />
             </Routes>
-           
           </div>
         </main>
 
         {/* Footer */}
-        <footer className="w-full mt-auto">
+        <footer className="w-full mt-auto bg-gray-800 text-white py-4">
           <Footer />
         </footer>
       </Router>
