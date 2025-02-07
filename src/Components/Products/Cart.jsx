@@ -257,7 +257,7 @@ const Cart = ({ cartItemCount, setCartItemCount }) => {
       </section>
     </Fragment>
   ) : !complete ? (
-    <div className="flex flex-col lg:flex-row justify-center items-center min-h-screen px-4 space-y-6 lg:space-y-0 lg:space-x-6">
+    <div className="bg-white flex flex-col lg:flex-row justify-center items-center min-h-screen px-4 space-y-6 lg:space-y-0 lg:space-x-6">
       <img
         src={CartEmptyImg}
         className="w-full max-w-xs md:max-w-sm lg:max-w-md focus:outline-none"
