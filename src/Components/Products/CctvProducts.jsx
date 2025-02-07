@@ -41,7 +41,7 @@ const CctvProducts = ({ product }) => {
         {loading ? (
           // Show loading gif when loading state is true
           <div className="w-full flex justify-center">
-            <img src={loadingGif} alt="Loading..." className="h-72 w-72" />
+            <img src={loadingGif} alt="Loading..."  className="h-32 w-32 sm:h-36 sm:w-36 md:h-40 md:w-40 lg:h-72 lg:w-72" />
           </div>
         ) : (
           // Show products when loading is false
