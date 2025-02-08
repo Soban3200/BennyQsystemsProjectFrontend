@@ -1,10 +1,4 @@
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedin,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import logo from "../../assets/logo.png";
 import "../../index.css";
 
@@ -13,7 +7,8 @@ function Footer() {
     <div className="bg-[#232F3E]">
       <div className="max-w-screen-lg px-4 sm:px-6 text-white sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
         <div className="p-5">
-          <img src={logo} alt="Company Logo" className="h-10" />
+          {/* Ensure width and height for logo */}
+          <img src={logo} alt="Company Logo" className="h-10" width="150" height="40" />
         </div>
         <div className="p-5">
           <div className="text-sm uppercase font-extrabold">Resources</div>
@@ -44,8 +39,7 @@ function Footer() {
             Contact Us
           </div>
           <a className="my-3 block text-[#ddd]" href="/#">
-            No 10, 1st Floor, Jeeva Complex, Alapakkam Main Road, Porur, Chennai
-            - 600116 (Near Jeeva Complex Same Building)
+            No 10, 1st Floor, Jeeva Complex, Alapakkam Main Road, Porur, Chennai - 600116
             <span className="text-teal-600 text-xs p-1"></span>
           </a>
           <a className="my-3 block text-[#ddd]" href="/#">
@@ -58,15 +52,13 @@ function Footer() {
       <div className="bg-[#131A22] shadow-xl pt-2">
         <div className="flex pb-5 px-3 m-auto pt-5 text-gray-800 text-lg flex-col max-w-screen-lg items-center">
           <div className="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-            {/* Twitter */}
+            {/* Social media icons */}
             <a href="/#" className="w-6 mx-1">
               <FaTwitter className="text-white hover:text-[#1DA1F2]" />
             </a>
-            {/* Facebook */}
             <a href="/#" className="w-6 mx-1">
               <FaFacebookF className="text-white hover:text-[#1877F2]" />
             </a>
-            {/* Youtube */}
             <a href="/#" className="w-6 mx-1">
               <FaYoutube className="text-white hover:text-[#f21818]" />
             </a>
